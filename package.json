@@ -10,5 +10,8 @@
     "discord"
   ],
   "author": "goblin01",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": [
+    "discord.js": "11.4.1"
+  ]
 }
