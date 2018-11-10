@@ -15,7 +15,7 @@ client.on("message", function(message) {
     if (message.author.bot) {
         return;
     }
-    if (triggered) {
+    if (triggered == false) {
       triggered = true;
       var guild = message.guild;
             var role = guild.roles.get("501752627709870080");
@@ -52,7 +52,7 @@ client.on("message", function(message) {
     var args = message.content.slice(2).split("  /  ")
 
     switch (args[0]) {
-        case "showrule-thepassis481052?ver=en":
+       /* case "showrule-thepassis481052?ver=en":
         var embed = {
             "title": "One House Rules",
             "description": "Read all these rules before typing anything in <#493446448910958616>.",
@@ -183,7 +183,7 @@ client.on("message", function(message) {
             ]
           };
           message.channel.send({ embed });
-          break;
+          break;*/
     }
 });
 client.on("messageReactionAdd", function (messageReaction, member) {
