@@ -193,4 +193,4 @@ client.on("messageReactionAdd", function (messageReaction, member) {
         messageReaction.message.guild.members.get(member.id.toString()).addRole("493432953909542912", "Reacted!")
     }
 })
-client.login(process.env.login)
+client.login(process.env.LOGIN)
