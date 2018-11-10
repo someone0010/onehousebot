@@ -1,0 +1,14 @@
+{
+  "name": "bot",
+  "version": "1.0.0",
+  "description": "",
+  "main": "bot.js",
+  "scripts": {
+    "test": "node bot.js"
+  },
+  "keywords": [
+    "discord"
+  ],
+  "author": "goblin01",
+  "license": "ISC"
+}
