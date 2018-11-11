@@ -34,7 +34,7 @@ client.on("message", function(message) {
                 role.setColor([Math.floor(Math.random() * 255), Math.floor(Math.random() * 255), Math.floor(Math.random() * 255)])
                 setTimeout(()=>{
                   role2.setColor([Math.floor(Math.random() * 255), Math.floor(Math.random() * 255), Math.floor(Math.random() * 255)])
-                })
+                }, 7500)
                 if (client.ping >= 12000) {
                     guild.channels.get("510904449913323520").send("High latency detected. Rainbow color feature has been shut down to prevent bot crash/server outage.");
                     triggered = false;
