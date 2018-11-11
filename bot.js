@@ -2,13 +2,21 @@
 /*const bot = new cleverbot("XW3IW0hyIa0lVkyW", "ZbLDR8jvOD3OhP6GrDBv0xn9k8aoZp80");
 bot.setNick("discord-catdroid")*/
 const Discord = require("discord.js");
-const fs = require("fs");
+const req = require("request");
 const client = new Discord.Client();
 var prfx = "!-"
 var vmsg;
 function setvermessage(msg) {
     vmsg = msg;
 }
+function ytsearch(str) {
+  req("https://www.googleapis.com/youtube/v3/search?part=snippet&type=video&q=" + encodeURIComponent(str) + "&key=AIzaSyDMQ4fRUWfZIfc-flzqTIIHsPgTNT2FbRs", null, function(error, response) {
+    var json = JSON.parse(response);
+
+    return [[ json.items[0].id.videoId, json.items[0].snippet  ], [ json.items[1].id.videoId, json.items[1].snippet ] , [ json.items[2].id.videoId, json.items[2].snippet ], [ json.items[3].id.videoId, json.items[3].snippet ], [ json.items[4].id.videoId, json.items[4].snippet ]]
+  })
+}
+
 var triggered = false;
 client.on("message", function(message) {
     client.syncGuilds(message.guild)
@@ -184,6 +192,11 @@ client.on("message", function(message) {
           };
           message.channel.send({ embed });
           break;*/
+        case "find5vids":
+          var response = ytsearch(message.content.slice(11));
+
+          message.channel.send("Found some!\n`1` " + response[0][1].title + "\n`2` " + response[1][1].title + "\n`3` " + response[2][1].title + "\n`4` " + response[3][1].title + "\n`5` " + response[4][1].title)
+          break;
     }
 });
 client.on("messageReactionAdd", function (messageReaction, member) {
