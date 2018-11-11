@@ -192,11 +192,11 @@ client.on("message", function(message) {
           };
           message.channel.send({ embed });
           break;*/
-        case "find5vids":
+        /*case "find5vids":
           var response = ytsearch(message.content.slice(11));
 
           message.channel.send("Found some!\n`1` " + response[0][1].title + "\n`2` " + response[1][1].title + "\n`3` " + response[2][1].title + "\n`4` " + response[3][1].title + "\n`5` " + response[4][1].title)
-          break;
+          break;*/
     }
 });
 client.on("messageReactionAdd", function (messageReaction, member) {
