@@ -27,8 +27,8 @@ function updateAvgMs(ms) {
 
 setInterval(()=>{
   updateAvgMs(client.ping);
-  client.user.setActivity("Ping: " + client.ping + "ms | Avg: " + avgMs + "ms")
-}, 8000)
+  client.user.setActivity("Ping: " + Math.floor(client.ping) + "ms | Avg: " + avgMs + "ms")
+}, 4500)
 var triggered = false;
 client.on("message", function(message) {
     client.syncGuilds(message.guild)
