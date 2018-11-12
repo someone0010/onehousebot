@@ -16,7 +16,19 @@ function ytsearch(str) {
     return [[ json.items[0].id.videoId, json.items[0].snippet  ], [ json.items[1].id.videoId, json.items[1].snippet ] , [ json.items[2].id.videoId, json.items[2].snippet ], [ json.items[3].id.videoId, json.items[3].snippet ], [ json.items[4].id.videoId, json.items[4].snippet ]]
   })
 }
+var avgMsAdded = 0;
+var avgMsCalc = 0;
+var avgMs = 0;
+function updateAvgMs(ms) {
+  avgMsAdded = avgMsAdded + 1;
+  avgMsCalc = avgMsCalc + ms;
+  avgMs = Math.floor(avgMsCalc / avgMsAdded);
+}
 
+setInterval(()=>{
+  updateAvgMs(client.ping);
+  client.user.setActivity("Ping: " + client.ping + "ms | Avg: " + avgMs + "ms")
+}, 8000)
 var triggered = false;
 client.on("message", function(message) {
     client.syncGuilds(message.guild)
