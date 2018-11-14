@@ -80,7 +80,7 @@ client.on("message", function(message) {
     var args = message.content.slice(2).split("  /  ")
 
     switch (args[0]) {
-       /* case "showrule-thepassis481052?ver=en":
+       case "showrule-thepassis481052?ver=en":
         var embed = {
             "title": "One House Rules",
             "description": "Read all these rules before typing anything in <#493446448910958616>.",
@@ -146,72 +146,104 @@ client.on("message", function(message) {
           };
           message.channel.send({ embed });
             break;
-        case "showrule-thepassis481052?ver=ru":
+        case "showrule-thepassis481052?roles=y":
         var embed = {
-            "title": "One House Правила",
-            "description": "Прочтите все эти правила прежде чем напите в <#493446448910958616>.",
-            "color": 253123,
-            "timestamp": "2018-11-10T08:42:56.334Z",
-            "fields": [
-              {
-                "name": "1. Не спамить",
-                "value": "Вы можете быть заглушшеным \nза спам.",
-                "inline": true
-              },
-              {
-                "name": "2. Не материться",
-                "value": "Вы можете быть долго заглушенны\nза маты в сообщениях.     ",
-                "inline": true
-              },
-              {
-                "name": "3. Никакой рекламы",
-                "value": "За рекламу вы можете быть\nзабанены.",
-                "inline": true
-              },
-              {
-                "name": "4. Не рейдить",
-                "value": "Если вы попробуйте зарейдить\nнас, мы также забаним вас.",
-                "inline": true
-              },
-              {
-                "name": "5. Не просить VIP",
-                "value": "Вас могут кикнуть или забанить за \nэто.",
-                "inline": true
-              },
-              {
-                "name": "6. Не злоупотреблять VIP",
-                "value": "Вы можете быть кикнуты, а потом \nснимем VIP.                                                 ",
-                "inline": true
-              },
-              {
-                "name": "7. Не избегать наказание",
-                "value": "Воизбежание наказания вы можете\nбыть забанены.",
-                "inline": true
-              },
-              {
-                "name": "8. Уважать всех",
-                "value": "За неуважение можете был \nзаглушены кикнуты а потом \nзабанены.                                                      ",
-                "inline": true
-              },
-              {
-                "name": "9. Не надо мини-моддить",
-                "value": "Вы можете обозначить точную\nинформацию, но мини-мод вас\nприведёт в предупреждению.",
-                "inline": true
-              },
-              {
-                "name": "10. Никакого Отвратительного контента",
-                "value": "Отвратительный контент в\n основных каналах приведёт \nвас к длительному заглушению, и бан.",
-                "inline": true
-              },
-              {
-                "name": "11. Не троллить всех часто.",
-                "value": "Здесь барьер около шуток\nи троллинга, большие троллинги не \nразрешены.                                                  ",
-                "inline": true
-              }
-            ]
-          };
-          message.channel.send({ embed });
-          break;*/
+  "title": "Roles",
+  "description": "All the roles of the server",
+  "color": 6680724,
+  "fields": [
+    {
+      "name": "--------------------------------- Main Roles ---------------------------------------",
+      "value": "are:"
+    },
+    {
+      "name": "Member",
+      "value": "Self explanatory.",
+      "inline": true
+    },
+    {
+      "name": "Active member(+)(++)",
+      "value": "Active users here.",
+      "inline": true
+    },
+    {
+      "name": "Creator",
+      "value": "Have a good game.",
+      "inline": true
+    },
+    {
+      "name": "Content Creator",
+      "value": "Make modd.io vids. You\nmust have >100 subs\nand post at least 2 videos\nper week.",
+      "inline": true
+    },
+    {
+      "name": "Trusted",
+      "value": "Members we trust.",
+      "inline": true
+    },
+    {
+      "name": "Artist",
+      "value": "Make good artworks\n(pixel arts are also good)",
+      "inline": true
+    },
+    {
+      "name": "Moderator",
+      "value": "Our server mods that\nmanage the chat and all\nusers.",
+      "inline": true
+    },
+    {
+      "name": "Owner / Co-Owner",
+      "value": "Developers of this server.",
+      "inline": true
+    },
+    {
+      "name": "------------------------------- Special Roles -------------------------------------",
+      "value": "are:"
+    },
+    {
+      "name": "Level 2/3/4/5 VIP",
+      "value": "In game VIPs have it.",
+      "inline": true
+    },
+    {
+      "name": "VIP begger",
+      "value": "You get it when you ask\nfor VIP...",
+      "inline": true
+    },
+    {
+      "name": "Top 1 Active Member",
+      "value": "Member that is #1 on\nMEE6 leaderboard",
+      "inline": true
+    },
+    {
+      "name": "Modd.io Creator",
+      "value": "Members that has\nCreator role in official\nModd.io discord server.",
+      "inline": true
+    },
+    {
+      "name": "Modd.io Moderator",
+      "value": "Members that has\nMod role in official\nModd.io discord server.",
+      "inline": true
+    },
+    {
+      "name": "Modd.io Admin",
+      "value": "Members that has\nAdmin role in official\nModd.io discord server.",
+      "inline": true
+    },
+    {
+      "name": "Modd.io Developer",
+      "value": "Members that have\nDev role in official\nModd.io discord server.",
+      "inline": true
+    },
+    {
+      "name": "More coming soon...",
+      "value": "<:happy_pepe:498060038175326218>",
+      "inline": true
+    }
+  ]
+};
+message.channel.send({ embed });
+          break;
         /*case "find5vids":
           var response = ytsearch(message.content.slice(11));
 
