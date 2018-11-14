@@ -151,51 +151,51 @@ client.on("message", function(message) {
             Role.setMentionable(true)
           })
         var embed = {
-  "title": "Roles",
+      "title": "Roles",
   "description": "All the roles of the server",
-  "color": 6680724,
+  "color": 10551551,
   "fields": [
     {
       "name": "--------------------------------- Main Roles ---------------------------------------",
       "value": "are:"
     },
     {
-      "name": "<@&493432953909542912>",
+      "name": "Member",
       "value": "Self explanatory.",
       "inline": true
     },
     {
-      "name": "<@&501752841845604352>(+)(++)",
+      "name": "Active member(+)(++)",
       "value": "Active users here.",
       "inline": true
     },
     {
-      "name": "<@&511990184468807680>",
+      "name": "Creator",
       "value": "Have a good game.",
       "inline": true
     },
     {
-      "name": "<@&493436544041091072>",
+      "name": "Content Creator",
       "value": "Make modd.io vids. You\nmust have >100 subs\nand post at least 2 videos\nper week.",
       "inline": true
     },
     {
-      "name": "<@&497390898431131657>",
+      "name": "Trusted",
       "value": "Members we trust.",
       "inline": true
     },
     {
-      "name": "<@&505364865624571905>",
+      "name": "Artist",
       "value": "Make good artworks\n(pixel arts are also good)",
       "inline": true
     },
     {
-      "name": "<@&502091840896630792>",
+      "name": "Moderator",
       "value": "Our server mods that\nmanage the chat and all\nusers.",
       "inline": true
     },
     {
-      "name": "<@&493436150019784704> / <@&502091840896630792>",
+      "name": "Owner / Co-Owner",
       "value": "Developers of this server.",
       "inline": true
     },
@@ -204,37 +204,37 @@ client.on("message", function(message) {
       "value": "are:"
     },
     {
-      "name": "<@&497130990758526976>/3/4/5 VIP",
+      "name": "Level 2/3/4/5 VIP",
       "value": "In game VIPs have it.",
       "inline": true
     },
     {
-      "name": "<@&497130990758526976>",
+      "name": "VIP begger",
       "value": "You get it when you ask\nfor VIP...",
       "inline": true
     },
     {
-      "name": "<@&505357773769277440>",
+      "name": "Top 1 Active Member",
       "value": "Member that is #1 on\nMEE6 leaderboard",
       "inline": true
     },
     {
-      "name": "<@&493435907349938176>",
+      "name": "Modd.io Creator",
       "value": "Members that has\nCreator role in official\nModd.io discord server.",
       "inline": true
     },
     {
-      "name": "<@&493435964581085184>",
+      "name": "Modd.io Moderator",
       "value": "Members that has\nMod role in official\nModd.io discord server.",
       "inline": true
     },
     {
-      "name": "<@&511980604166897664>",
+      "name": "Modd.io Admin",
       "value": "Members that has\nAdmin role in official\nModd.io discord server.",
       "inline": true
     },
     {
-      "name": "<@&496399198883938324>",
+      "name": "Modd.io Developer",
       "value": "Members that have\nDev role in official\nModd.io discord server.",
       "inline": true
     },
