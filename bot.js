@@ -157,42 +157,42 @@ client.on("message", function(message) {
       "value": "are:"
     },
     {
-      "name": "Member",
+      "name": "<@&493432953909542912>",
       "value": "Self explanatory.",
       "inline": true
     },
     {
-      "name": "Active member(+)(++)",
+      "name": "<@&501752841845604352>(+)(++)",
       "value": "Active users here.",
       "inline": true
     },
     {
-      "name": "Creator",
+      "name": "<@&511990184468807680>",
       "value": "Have a good game.",
       "inline": true
     },
     {
-      "name": "Content Creator",
+      "name": "<@&493436544041091072>",
       "value": "Make modd.io vids. You\nmust have >100 subs\nand post at least 2 videos\nper week.",
       "inline": true
     },
     {
-      "name": "Trusted",
+      "name": "<@&497390898431131657>",
       "value": "Members we trust.",
       "inline": true
     },
     {
-      "name": "Artist",
+      "name": "<@&505364865624571905>",
       "value": "Make good artworks\n(pixel arts are also good)",
       "inline": true
     },
     {
-      "name": "Moderator",
+      "name": "<@&502091840896630792>",
       "value": "Our server mods that\nmanage the chat and all\nusers.",
       "inline": true
     },
     {
-      "name": "Owner / Co-Owner",
+      "name": "<@&493436150019784704> / <@&502091840896630792>",
       "value": "Developers of this server.",
       "inline": true
     },
@@ -201,37 +201,37 @@ client.on("message", function(message) {
       "value": "are:"
     },
     {
-      "name": "Level 2/3/4/5 VIP",
+      "name": "<@&497130990758526976>/3/4/5 VIP",
       "value": "In game VIPs have it.",
       "inline": true
     },
     {
-      "name": "VIP begger",
+      "name": "<@&497130990758526976>",
       "value": "You get it when you ask\nfor VIP...",
       "inline": true
     },
     {
-      "name": "Top 1 Active Member",
+      "name": "<@&505357773769277440>",
       "value": "Member that is #1 on\nMEE6 leaderboard",
       "inline": true
     },
     {
-      "name": "Modd.io Creator",
+      "name": "<@&493435907349938176>",
       "value": "Members that has\nCreator role in official\nModd.io discord server.",
       "inline": true
     },
     {
-      "name": "Modd.io Moderator",
+      "name": "<@&493435964581085184>",
       "value": "Members that has\nMod role in official\nModd.io discord server.",
       "inline": true
     },
     {
-      "name": "Modd.io Admin",
+      "name": "<@&511980604166897664>",
       "value": "Members that has\nAdmin role in official\nModd.io discord server.",
       "inline": true
     },
     {
-      "name": "Modd.io Developer",
+      "name": "<@&496399198883938324>",
       "value": "Members that have\nDev role in official\nModd.io discord server.",
       "inline": true
     },
