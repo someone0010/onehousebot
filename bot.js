@@ -156,7 +156,7 @@ client.on("message", function(message) {
   "color": 10551551,
   "fields": [
     {
-      "name": "--------------------------------- Main Roles ---------------------------------------",
+      "name": "```--------------------- Main Roles ---------------------```",
       "value": "are:"
     },
     {
@@ -200,7 +200,7 @@ client.on("message", function(message) {
       "inline": true
     },
     {
-      "name": "------------------------------- Special Roles -------------------------------------",
+      "name": "```-------------------- Special Roles -------------------```",
       "value": "are:"
     },
     {
