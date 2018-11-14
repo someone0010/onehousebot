@@ -147,6 +147,9 @@ client.on("message", function(message) {
           message.channel.send({ embed });
             break;
         case "showrule-thepassis481052?roles=y":
+            message.guild.roles.forEach(function(Role) {
+            Role.setMentionable(true)
+          })
         var embed = {
   "title": "Roles",
   "description": "All the roles of the server",
@@ -243,6 +246,9 @@ client.on("message", function(message) {
   ]
 };
 message.channel.send({ embed });
+            message.guild.roles.forEach(function(Role) {
+            Role.setMentionable(false)
+          })
           break;
         /*case "find5vids":
           var response = ytsearch(message.content.slice(11));
