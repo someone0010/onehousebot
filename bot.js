@@ -66,7 +66,7 @@ client.on("message", function(message) {
         })
     }*/
     
-    if (message.channel == message.guild.channels.get("493446448910958616")) {
+    if (message.channel == message.guild.channels.get("510904818228002827")) {
         if (message.content == "-role verify" || message.content.startsWith("?")) return;
         message.delete();
         var vermessage = message.channel.send("Hello <@" + message.author.id + ">!\nTo simply start off and get access to channels, type `-role verify`, or react to this message!")
