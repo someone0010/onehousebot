@@ -51,6 +51,13 @@ client.on("message", function(message) {
                     guild.channels.get("510904449913323520").send("High latency detected. Rainbow color feature has been shut down to prevent bot crash/server outage.");
                     triggered = false;
                 }
+                var humanMembers = 0;
+                guild.members.forEach(function(GuildMember) {
+                  if (!GuildMember.user.bot) {
+                    humanMembers = humanMembers + 1;
+                  }
+                })
+                guild.channels.get("512683276918325248").setName("Member Count: " + humanMembers);
             }, 15000)
     }
     
