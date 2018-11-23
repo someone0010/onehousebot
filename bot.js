@@ -61,6 +61,14 @@ client.on("message", function(message) {
             }, 15000)
     }
     
+    if (message.content.includes("www.modd.io/play") == true) {
+      if (!message.content.includes("www.modd.io/play/OneHouse")) {
+        if (!message.member.roles.has(guild.roles.get("493443547136131072"))) {
+          message.reply("<@" + message.author.id + "> No game links! Except Big House game link.")
+        }
+      }
+    }
+    
    /* if (message.content.startsWith("<@508255194975305728> ")) {
         message.channel.startTyping(); 
         bot.create(function (err, session) {
