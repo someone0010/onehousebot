@@ -70,7 +70,7 @@ client.on("message", function(message) {
         }
       }
     }
-    if (message.content.startsWith("@someone") {
+    if (message.content.startsWith("@someone")) {
         var rand = someoneAsciiFaces[Math.floor(Math.random * someoneAsciiFaces.length)];
         message.channel.send(rand + " .... I choosed " + message.guild.members.random().username);
     }
