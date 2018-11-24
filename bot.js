@@ -16,6 +16,8 @@ function ytsearch(str) {
     return [[ json.items[0].id.videoId, json.items[0].snippet  ], [ json.items[1].id.videoId, json.items[1].snippet ] , [ json.items[2].id.videoId, json.items[2].snippet ], [ json.items[3].id.videoId, json.items[3].snippet ], [ json.items[4].id.videoId, json.items[4].snippet ]]
   })
 }
+var someoneAsciiFaces = ["( ͡° ͜ʖ ͡°)", "¯\_(ツ)_/¯", "( ͡°( ͡° ͜ʖ( ͡° ͜ʖ ͡°)ʖ ͡°) ͡°)", "(ノಠ益ಠ)ノ彡┻━┻", "(╯°□°）╯︵ ┻━┻", "┬──┬ ノ( ゜-゜ノ)"]
+
 var avgMsAdded = 0;
 var avgMsCalc = 0;
 var avgMs = 0;
@@ -63,12 +65,15 @@ client.on("message", function(message) {
     
     if (message.content.includes("www.modd.io/play") == true) {
       if (!message.content.includes("www.modd.io/play/OneHouse")) {
-        if (!message.member.roles.has(guild.roles.get("493443547136131072"))) {
-          message.reply("<@" + message.author.id + "> No game links! Except Big House game link.")
+        if (!message.member.roles.has("493443547136131072")) {
+          message.reply("No game links! Except Big House game link.")
         }
       }
     }
-    
+    if (message.content.startsWith("@someone") {
+        var rand = someoneAsciiFaces[Math.floor(Math.random * someoneAsciiFaces.length)];
+        message.channel.send(rand + " .... I choosed " + message.guild.members.random().user.username);
+    }
    /* if (message.content.startsWith("<@508255194975305728> ")) {
         message.channel.startTyping(); 
         bot.create(function (err, session) {
