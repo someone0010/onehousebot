@@ -89,8 +89,8 @@ client.on("message", function(message) {
           }
         }}).then((msg) => {
           msg.react("✅");
-          msg.react("neutral");
-          msg.react("bad");
+          msg.react("516258169035554817");
+          msg.react("516258587845328906");
         })
         
       } catch {
