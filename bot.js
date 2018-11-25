@@ -41,18 +41,7 @@ client.on("message", function(message) {
       triggered = true;
         
       var guild = message.guild;
-            var role = guild.roles.get("501752627709870080");
-            var role2 = guild.roles.get("493436150019784704");
-        guild.channels.get("510904449913323520").send("Rainbow color roles have been enabled.");
             setInterval(()=>{
-                role.setColor([Math.floor(Math.random() * 255), Math.floor(Math.random() * 255), Math.floor(Math.random() * 255)])
-                setTimeout(()=>{
-                  role2.setColor([Math.floor(Math.random() * 255), Math.floor(Math.random() * 255), Math.floor(Math.random() * 255)])
-                }, 7500)
-                if (client.ping >= 12000) {
-                    guild.channels.get("510904449913323520").send("High latency detected. Rainbow color feature has been shut down to prevent bot crash/server outage.");
-                    triggered = false;
-                }
                 var humanMembers = 0;
                 guild.members.forEach(function(GuildMember) {
                   if (!GuildMember.user.bot) {
