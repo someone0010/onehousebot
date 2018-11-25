@@ -88,7 +88,7 @@ client.on("message", function(message) {
             text: "Reason why this idea: " + json.why
           }
         }}).then((msg) => {
-          msg.react("white_check_mark");
+          msg.react("✅");
           msg.react("neutral");
           msg.react("bad");
         })
