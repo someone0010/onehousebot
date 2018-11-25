@@ -63,16 +63,43 @@ client.on("message", function(message) {
             }, 15000)
     }
     
-    if (message.content.includes("www.modd.io/play") == true) {
-      if (!message.content.includes("www.modd.io/play/OneHouse")) {
-        if (!message.member.roles.has("493443547136131072")) {
-          message.reply("No game links! Except Big House game link.")
-        }
-      }
-    }
     if (message.content.startsWith("@someone")) {
         var rand = someoneAsciiFaces[Math.floor(Math.random() * someoneAsciiFaces.length)];
         message.channel.send(rand + " .... I choosed " + message.guild.members.random().user.username);
+    }
+        if (message.channel.id == "516263179446124555") {
+      
+      message.channel.send("Reading JSON..").then((msg) => {
+        msg.delete(2100);
+      })
+      try {
+        var json = JSON.parse(message.content);
+        message.channel.send("Read successful.").then((msg) => {
+          msg.delete(2000);
+        })
+        message.channel.send("", {embed: {
+          title: json.name,
+          description: json.description,
+          author: {
+            name: message.author.username,
+            icon_url: message.author.avatarURL
+          },
+          footer: {
+            text: "Reason why this idea: " + json.why
+          }
+        }}).then((msg) => {
+          msg.react("white_check_mark");
+          msg.react("neutral");
+          msg.react("bad");
+        })
+        
+      } catch {
+         message.channel.send("JSON read error. Check your JSON!").then((msg) => {
+           msg.delete(7000);
+         })
+        
+      }
+      message.delete();
     }
    /* if (message.content.startsWith("<@508255194975305728> ")) {
         message.channel.startTyping(); 
