@@ -294,6 +294,7 @@ message.channel.send({ embed });
     }
 });
 client.on("messageReactionAdd", function (messageReaction, member) {
+    if (member.bot) return;
     if (messageReaction.message.channel.id == "516263179446124555") {
       if (!messageReaction.message.embeds[0].footer.text.includes("Reason why this idea:")) return;
       switch (messageReaction.emoji.name) {
