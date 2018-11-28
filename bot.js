@@ -294,6 +294,122 @@ message.channel.send({ embed });
     }
 });
 client.on("messageReactionAdd", function (messageReaction, member) {
+    if (messageReaction.message.channel.id == "516263179446124555") {
+      if (!messageReaction.message.embeds[0].footer.text.includes("Reason why this idea:")) return;
+      switch (messageReaction.emoji.name) {
+        case "✅":
+          if (messageReaction.count >= 10) {
+            messageReaction.message.channel.send("", {embed: {
+              title: "Suggestion Approved",
+              description: messageReaction.message.embeds[0].title + "\n" + messageReaction.message.embeds[0].description,
+              author: {
+                name: messageReaction.message.embeds[0].author.name,
+                icon_url: messageReaction.message.embeds[0].author.iconURL
+              },
+              color: 3394611,
+              footer: {
+                text: "Why: The message got 10 ✅ reactions."
+              }
+            }})
+          }
+          messageReaction.message.delete();
+          break;
+        case "516258169035554817":
+          if (messageReaction.count >= 8) {
+            messageReaction.message.channel.send("", {embed: {
+              title: "Suggestion sent to Staff",
+              description: messageReaction.message.embeds[0].title + "\n" + messageReaction.message.embeds[0].description,
+              author: {
+                name: messageReaction.message.embeds[0].author.name,
+                icon_url: messageReaction.message.embeds[0].author.iconURL
+              },
+              color: 16764006,
+              footer: {
+                text: "Why: The message got 8 <:neutral:516258169035554817> reactions."
+              }
+            }})
+          }
+          messageReaction.message.guild.channels.get("517331518843125760").send("", {embed: {
+            title: "Suggestion to check",
+            description: messageReaction.message.embeds[0].title + "\n" + messageReaction.message.embeds[0].description,
+            author: {
+              name: messageReaction.message.embeds[0].author.name,
+              icon_url: messageReaction.message.embeds[0].author.iconURL
+            },
+            color: 16764006,
+            footer: {
+              text: "Approving/disapproving this won't change the embed in <#516263179446124555>."
+            }
+          }})
+          messageReaction.message.delete();
+          break;
+        case "516258587845328906":
+          if (messageReaction.count >= 7) {
+            messageReaction.message.channel.send("", {embed: {
+              title: "Suggestion Rejected",
+              description: messageReaction.message.embeds[0].title + "\n" + messageReaction.message.embeds[0].description,
+              author: {
+                name: messageReaction.message.embeds[0].author.name,
+                icon_url: messageReaction.message.embeds[0].author.iconURL
+              },
+              color: 16724736,
+              footer: {
+                text: "Why: The message got 7 <:bad:516258587845328906> reactions."
+              }
+            }})
+          }
+          break;
+        case "☑":
+          var staffMemberReacted = false;
+          messageReaction.message.guild.members.forEach(function(GuildMember) {
+            if (messageReaction.users.keyArray().includes(GuildMember.user) && (GuildMember.roles.has("501752627709870080") || GuildMember.roles.has("493436150019784704"))) {
+              staffMemberReacted = true;
+            }
+          })
+
+          if (staffMemberReacted) {
+            messageReaction.message.channel.send("", {embed: {
+              title: "Suggestion Approved",
+              description: messageReaction.message.embeds[0].title + "\n" + messageReaction.message.embeds[0].description,
+              author: {
+                name: messageReaction.message.embeds[0].author.name,
+                icon_url: messageReaction.message.embeds[0].author.iconURL
+              },
+              color: 3394611,
+              footer: {
+                text: "Why: A owner or co-owner manually approved it."
+              }
+            }})
+            messageReaction.message.delete();
+          }
+          break;
+        case "517327626373824522":
+          var staffMemberReacted = false;
+          messageReaction.message.guild.members.forEach(function(GuildMember) {
+            if (messageReaction.users.keyArray().includes(GuildMember.user) && (GuildMember.roles.has("501752627709870080") || GuildMember.roles.has("493436150019784704"))) {
+              staffMemberReacted = true;
+            }
+          })
+
+          if (staffMemberReacted) {
+            messageReaction.message.channel.send("", {embed: {
+              title: "Suggestion Rejected",
+              description: messageReaction.message.embeds[0].title + "\n" + messageReaction.message.embeds[0].description,
+              author: {
+                name: messageReaction.message.embeds[0].author.name,
+                icon_url: messageReaction.message.embeds[0].author.iconURL
+              },
+              color: 16724736,
+              footer: {
+                text: "Why: A owner or co-owner manually rejected it."
+              }
+            }})
+            messageReaction.message.delete();
+          }
+          break;
+      }
+      
+    }
     console.log("setted 2")
     if (messageReaction.message == vmsg) {
         console.log("setted 3")
