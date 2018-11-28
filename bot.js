@@ -296,8 +296,7 @@ message.channel.send({ embed });
 client.on("messageReactionAdd", function (messageReaction, member) {
     if (member.bot) return;
         if (messageReaction.message.channel.id == "516263179446124555") {
-      if (!messageReaction.message.embeds[0].footer.text.includes("Reason why this idea:")) return;
-         if (messageReaction.emoji.name == "✅") {}
+         if (messageReaction.emoji.name == "✅") {
           if (messageReaction.count >= 10) {
             messageReaction.message.channel.send("", {embed: {
               title: "Suggestion Approved",
@@ -407,8 +406,11 @@ client.on("messageReactionAdd", function (messageReaction, member) {
             messageReaction.message.delete();
           }
         }
+      }
 
       
+    
+    
     
     console.log("setted 2")
     if (messageReaction.message == vmsg) {
