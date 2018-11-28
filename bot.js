@@ -362,7 +362,7 @@ client.on("messageReactionAdd", function (messageReaction, member) {
         case "☑":
           var staffMemberReacted = false;
           messageReaction.message.guild.members.forEach(function(GuildMember) {
-            if (messageReaction.users.keyArray().includes(GuildMember.user) && GuildMember.roles.has("517341315155886082")) {
+            if (messageReaction.users.keyArray().includes(GuildMember.user) && GuildMember.roles.find("name", "Superuser")) {
               staffMemberReacted = true;
                 console.log("a staff member approved it")
             }
@@ -387,7 +387,7 @@ client.on("messageReactionAdd", function (messageReaction, member) {
         case "517327626373824522":
           var staffMemberReacted = false;
           messageReaction.message.guild.members.forEach(function(GuildMember) {
-            if (messageReaction.users.keyArray().includes(GuildMember.user) && GuildMember.roles.has("517341315155886082")) {
+            if (messageReaction.users.keyArray().includes(GuildMember.user) && GuildMember.roles.find("name", "Superuser")) {
               staffMemberReacted = true;
             } else {
                 console.log("user " + GuildMember.user.username + " doesn't have required role")
