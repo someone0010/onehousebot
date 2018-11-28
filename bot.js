@@ -295,10 +295,9 @@ message.channel.send({ embed });
 });
 client.on("messageReactionAdd", function (messageReaction, member) {
     if (member.bot) return;
-    if (messageReaction.message.channel.id == "516263179446124555") {
+        if (messageReaction.message.channel.id == "516263179446124555") {
       if (!messageReaction.message.embeds[0].footer.text.includes("Reason why this idea:")) return;
-      switch (messageReaction.emoji.name) {
-        case "✅":
+         if (messageReaction.emoji.name == "✅") {}
           if (messageReaction.count >= 10) {
             messageReaction.message.channel.send("", {embed: {
               title: "Suggestion Approved",
@@ -314,8 +313,8 @@ client.on("messageReactionAdd", function (messageReaction, member) {
             }})
           }
           messageReaction.message.delete();
-          break;
-        case "516258169035554817":
+        }
+        if (messageReaction.emoji.name == "516258169035554817") {
           if (messageReaction.count >= 8) {
             messageReaction.message.channel.send("", {embed: {
               title: "Suggestion sent to Staff",
@@ -343,8 +342,8 @@ client.on("messageReactionAdd", function (messageReaction, member) {
             }
           }})
           messageReaction.message.delete();
-          break;
-        case "516258587845328906":
+        }
+        if (messageReaction.emoji.name == "516258587845328906") {
           if (messageReaction.count >= 7) {
             messageReaction.message.channel.send("", {embed: {
               title: "Suggestion Rejected",
@@ -359,13 +358,12 @@ client.on("messageReactionAdd", function (messageReaction, member) {
               }
             }})
           }
-          break;
-        case "☑":
+        }
+        if (messageReaction.emoji.name == "☑") {
           var staffMemberReacted = false;
           messageReaction.message.guild.members.forEach(function(GuildMember) {
-            if (messageReaction.users.keyArray().includes(GuildMember.user) && (GuildMember.id == "372737442840707072" || GuildMember.id == "408924581802541076")) {
+            if (messageReaction.users.keyArray().includes(GuildMember.user) && (GuildMember.roles.has("501752627709870080") || GuildMember.roles.has("493436150019784704"))) {
               staffMemberReacted = true;
-                console.log("a staff member approved it")
             }
           })
 
@@ -384,14 +382,12 @@ client.on("messageReactionAdd", function (messageReaction, member) {
             }})
             messageReaction.message.delete();
           }
-          break;
-        case "517327626373824522":
+        }
+        if (messageReaction.emoji.name == "517327626373824522") {
           var staffMemberReacted = false;
           messageReaction.message.guild.members.forEach(function(GuildMember) {
-            if (messageReaction.users.keyArray().includes(GuildMember.user) && (GuildMember.id == "372737442840707072" || GuildMember.id == "408924581802541076")) {
+            if (messageReaction.users.keyArray().includes(GuildMember.user) && (GuildMember.id || GuildMember.roles.find)) {
               staffMemberReacted = true;
-            } else {
-                console.log("user " + GuildMember.user.username + " doesn't have required role")
             }
           })
 
@@ -410,10 +406,10 @@ client.on("messageReactionAdd", function (messageReaction, member) {
             }})
             messageReaction.message.delete();
           }
-          break;
-      }
+        }
+
       
-    }
+    
     console.log("setted 2")
     if (messageReaction.message == vmsg) {
         console.log("setted 3")
