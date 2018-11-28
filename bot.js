@@ -365,7 +365,7 @@ client.on("messageReactionAdd", function (messageReaction, member) {
               staffMemberReacted = true;
             }
           })
-
+            console.log("reached manapprove")
           if (staffMemberReacted) {
             messageReaction.message.channel.send("", {embed: {
               title: "Suggestion Approved",
