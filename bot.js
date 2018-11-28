@@ -364,6 +364,7 @@ client.on("messageReactionAdd", function (messageReaction, member) {
           messageReaction.message.guild.members.forEach(function(GuildMember) {
             if (messageReaction.users.keyArray().includes(GuildMember.user) && (GuildMember.roles.has("501752627709870080") || GuildMember.roles.has("493436150019784704"))) {
               staffMemberReacted = true;
+                console.log("a staff member approved it")
             }
           })
 
