@@ -387,10 +387,10 @@ client.on("messageReactionAdd", function (messageReaction, member) {
         case "517327626373824522":
           var staffMemberReacted = false;
           messageReaction.message.guild.members.forEach(function(GuildMember) {
-            if (messageReaction.users.keyArray().includes(GuildMember.user) && (GuildMember.roles.has("501752627709870080") || GuildMember.roles.has("493436150019784704"))) {
+            if (messageReaction.users.keyArray().includes(GuildMember.user) && GuildMember.roles.has("517341315155886082")) {
               staffMemberReacted = true;
             } else {
-                console.log("user " + GuildMember.user.username + " doesn't have required role"
+                console.log("user " + GuildMember.user.username + " doesn't have required role")
             }
           })
 
