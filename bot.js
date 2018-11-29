@@ -117,6 +117,20 @@ client.on("message", function(message) {
     var args = message.content.slice(2).split("  /  ")
 
     switch (args[0]) {
+            
+            case "addEmoteRestriction":
+
+            if (!message.member.roles.has("517341315155886082")) {
+                message.reply("No permissions (1): role Superuser not found");
+                return;
+            }
+            try {
+                message.guild.emojis.find("name", args[1].replace(" ", "")).addRestrictedRole(message.guild.roles.find("name", args[2].replace(" ", "")))
+            } catch(err) {
+                message.channel.send("An error occured while adding role restriction.\n```js\n" + err + "\n```")
+            }
+            break;
+
        case "showrule-thepassis481052?ver=en":
         var embed = {
             "title": "One House Rules",
