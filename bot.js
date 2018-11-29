@@ -37,9 +37,7 @@ client.on("message", function(message) {
     if (message.author.bot) {
         return;
     }
-        message.guild.emojis.find("id", "498417446173147167").addRestrictedRole(message.guild.roles.find("id", "501752894291312641"))
-    message.guild.emojis.find("id", "495512440331567104").addRestrictedRole(message.guild.roles.find("id", "501752894291312641"))
-    message.guild.emojis.find("id", "517708850787254273").addRestrictedRole(message.guild.roles.find("id", "501752894291312641"))
+
     if (triggered == false && client.ping <= 7000) {
       triggered = true;
         
