@@ -77,9 +77,9 @@ client.on("message", function(message) {
             text: "Reason why this idea: " + json.why
           }
         }}).then((msg) => {
-          msg.react("✅");
-          msg.react("516258169035554817");
-          msg.react("516258587845328906");
+          await msg.react("✅");
+          await msg.react("516258169035554817");
+          await msg.react("516258587845328906");
         })
         
       } catch {
