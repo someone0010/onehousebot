@@ -126,6 +126,7 @@ client.on("message", function(message) {
             }
             try {
                 message.guild.emojis.find("name", args[1].replace(" ", "")).addRestrictedRole(message.guild.roles.find("name", args[2].replace(" ", "")))
+                                message.channel.send("Emoji successfully restricted!")
             } catch(err) {
                 message.channel.send("An error occured while adding role restriction.\n```js\n" + err + "\n```")
             }
