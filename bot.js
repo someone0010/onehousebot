@@ -117,7 +117,39 @@ client.on("message", function(message) {
     var args = message.content.slice(2).split("  /  ")
 
     switch (args[0]) {
-            
+                    case "cod3breaker":
+            var codebreaker = {
+                a = 0,
+                b = 0,
+                c = 0,
+                d = 0,
+                e = 0,
+                f = 0
+            };
+            codebreaker.a = Math.floor(Math.random() * 30);
+            codebreaker.b = Math.floor(Math.random() * 30) + 31;
+            codebreaker.c = Math.floor(Math.random() * 30) + 62;
+            codebreaker.d = Math.floor(Math.random() * 30) + 93;
+            codebreaker.e = Math.floor(Math.random() * 30) + 124;
+            codebreaker.f = Math.floor(Math.random() * 30) + 155;
+
+            message.channel.send("Numbers are:\n**" + codebreaker.a + ", " + codebreaker.b + ", " + codebreaker.c + ", " + codebreaker.d + ", " + codebreaker.e + ", " + codebreaker.f + "\nYou have 2 minutes to solve this. ");
+            var msg = message;
+            const filter = msg => msg.author.id.includes(message.author.id)
+            message.channel.awaitMessages(null, { time: 100000, errors: ['time'], max: 1 })
+                .then(function (message) {
+                    if (message.content.includes((codebreaker.b - codebreaker.a).toString() + (codebreaker.c - codebreaker.b).toString() + (codebreaker.d - codebreaker.c).toString() + (codebreaker.e - codebreaker.d).toString() + (codebreaker.f - codebreaker.e).toString())) {
+                        message.channel.send("You found the RIGHT code!")
+                        if (!message.member.roles.has("518779140732878849")) {
+                            message.member.addRole("518779140732878849")
+                        } 
+                    } else {
+                        message,channel.send("That's the wrong code!")
+                    }
+                })
+                .catch(collected => message.channel.send("Breaking code time is up!"))
+            break;
+
             case "addEmoteRestriction":
 
             if (!message.member.roles.has("517341315155886082")) {
