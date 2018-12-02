@@ -4,7 +4,7 @@ bot.setNick("discord-catdroid")*/
 const Discord = require("discord.js");
 const req = require("request");
 const client = new Discord.Client();
-var prfx = "/"
+var prfx = "!!"
 var vmsg;
 function setvermessage(msg) {
     vmsg = msg;
