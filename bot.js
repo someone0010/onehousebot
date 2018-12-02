@@ -132,10 +132,10 @@ client.on("message", function(message) {
             e = Math.floor(Math.random() * 30) + 124;
             f = Math.floor(Math.random() * 30) + 155;
 
-            message.channel.send("Numbers are:\n**" + a + ", " + b + ", " + c + ", " + d + ", " + e + ", " + f + "\nYou have 2 minutes to solve this. ");
+            message.channel.send("Numbers are:\n**" + a + ", " + b + ", " + c + ", " + d + ", " + e + ", " + f + "**\nYou have 2 minutes to solve this. ");
             var msg = message;
             const filter = msg => msg.author.id.includes(message.author.id)
-            message.channel.awaitMessages(null, { time: 100000, errors: ['time'], max: 1 })
+            message.channel.awaitMessages(filter, { time: 100000, errors: ['time'] })
                 .then(function (message) {
                     if (message.content.includes((b - a).toString() + (c - b).toString() + (d - c).toString() + (e - d).toString() + (f - e).toString())) {
                         message.channel.send("You found the RIGHT code!")
