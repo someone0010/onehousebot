@@ -466,8 +466,10 @@ client.on("messageReactionAdd", function (messageReaction, member) {
         messageReaction.message.guild.members.get(member.id.toString()).addRole("493432953909542912", "Reacted!")
     }
 })
+var devlogchannel = null;
+
 client.on("ready", function() {
-    setdevlogs(client.guilds.get("493432486148177923").channels.get("520952642608824349"));
+    devlogchannel = client.guilds.get("493432486148177923").channels.get("520952642608824349");
     devlogchannel.send("", {embed: {
         title: "Event Emit",
         description: "ready"
