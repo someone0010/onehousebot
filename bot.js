@@ -487,4 +487,17 @@ client.on("error", (e)=> {
         description: "error\n```\n" + e + "\n```"
     }})
 })
+client.on("channelCreate", (e) => {
+    devlogchannel.send("", {embed: {
+        title: "Event Emit",
+        description: "channelCreate\n```\n" + channel + "\n```"
+    }})
+})
+client.on("channelDelete", (e)=> {
+    devlogchannel.send("", {embed: {
+        title: "Event Emit",
+        description: "channelDelete\n```\n" + e + "\n```"
+    }})
+})
+
 client.login(process.env.LOGIN)
