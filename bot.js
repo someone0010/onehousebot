@@ -341,62 +341,9 @@ message.channel.send({ embed });
           break;*/
     }
 });
-client.on("messageUpdate", function(oldMessage, newMessage) {
-    console.log("Message update")
-    if (newMessage.channel == "516263179446124555") {
-        newMessage.reactions.forEach(function(messageReaction) {
-            if (messageReaction.emoji.name == "✅") {
-                console.log("Rect0 In")
-                var ok = false;
-                messageReaction.users.forEach(function(User) {
-                    if (User.id == "408924581802541076" || User.id == "372737442840707072") {
-                        ok = true;
-                    } else {
-                        console.log(User.id)
-                    }
-                })
-                if (ok) {
-                    messageReaction.message.channel.send("", {
-                        embed: {
-                            title: "Suggestion Approved",
-                            description: messageReaction.message.embeds[0].title + "\n" + messageReaction.message.embeds[0].description,
-                            author: {
-                                name: messageReaction.message.embeds[0].author.name,
-                                icon_url: messageReaction.message.embeds[0].author.iconURL
-                            },
-                            color: 3394611
-                        }
-                    })
-                }
-                messageReaction.message.delete();
-            }
-            if (messageReaction.emoji.name == "516258587845328906") {
-                var ok = false;
-                messageReaction.users.forEach(function(User) {
-                    if (User.id == "408924581802541076" || User.id == "372737442840707072") {
-                        ok = true;
-                    }
-                })
-                if (ok) {
-                    messageReaction.message.channel.send("", {
-                        embed: {
-                            title: "Suggestion Rejected",
-                            description: messageReaction.message.embeds[0].title + "\n" + messageReaction.message.embeds[0].description,
-                            author: {
-                                name: messageReaction.message.embeds[0].author.name,
-                                icon_url: messageReaction.message.embeds[0].author.iconURL
-                            },
-                            color: 16724736
-                        }
-                    })
-                }
-            }
-        })
-    }
-})
 client.on("messageReactionAdd", function (messageReaction, member) {
     console.log(messageReaction.emoji.name);
-    if (messageReaction.emoji.name == "✅") {
+        if (messageReaction.emoji.name == "☑") {
         console.log("Rect0 In")
         var ok = false;
         messageReaction.users.forEach(function(User) {
@@ -421,7 +368,7 @@ client.on("messageReactionAdd", function (messageReaction, member) {
         }
         messageReaction.message.delete();
     }
-    if (messageReaction.emoji.name == "516258587845328906") {
+    if (messageReaction.emoji.name == "517327626373824522") {
         var ok = false;
         messageReaction.users.forEach(function(User) {
             if (User.id == "408924581802541076" || User.id == "372737442840707072") {
