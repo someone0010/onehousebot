@@ -168,7 +168,13 @@ client.on("message", function(message) {
 client.on("messageReactionAdd", function (messageReaction, member) {
     console.log(messageReaction.emoji.name);
     if (messageReaction.emoji.name == "☑") {
-
+                var ok = false;
+        messageReaction.users.forEach(function(User) {
+            if (User.id == "408924581802541076" || User.id == "372737442840707072") {
+                ok = true;
+            }
+        })
+        if (!ok) return;
         messageReaction.message.channel.send("", {
             embed: {
                 title: "Suggestion Approved",
