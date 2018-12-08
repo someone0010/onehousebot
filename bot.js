@@ -490,7 +490,7 @@ client.on("error", (e)=> {
 client.on("channelCreate", (e) => {
     devlogchannel.send("", {embed: {
         title: "Event Emit",
-        description: "channelCreate\n```\n" + channel + "\n```"
+        description: "channelCreate\n```\n" + e + "\n```"
     }})
 })
 client.on("channelDelete", (e)=> {
