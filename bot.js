@@ -189,7 +189,7 @@ client.on("messageReactionAdd", function (messageReaction, member) {
 
         messageReaction.message.delete();
     }
-    if (messageReaction.emoji.name == "517327626373824522") {
+    if (messageReaction.emoji.name == "suggestionRejected") {
 
         messageReaction.message.channel.send("", {
             embed: {
