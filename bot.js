@@ -344,10 +344,13 @@ message.channel.send({ embed });
 client.on("messageReactionAdd", function (messageReaction, member) {
     if (member.bot) return;
     if (messageReaction.emoji.name == "✅") {
+        console.log("Rect0 In")
         var ok = false;
         messageReaction.users.forEach(function(User) {
             if (User.id == "408924581802541076" || User.id == "372737442840707072") {
                 ok = true;
+            } else {
+                console.log(User.id)
             }
         })
         if (ok) {
