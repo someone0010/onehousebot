@@ -343,8 +343,7 @@ message.channel.send({ embed });
 });
 client.on("messageReactionAdd", function (messageReaction, member) {
     console.log(messageReaction.emoji.name);
-            if (messageReaction.emoji.name == "☑") {
-        console.log("Rect0 In")
+    if (messageReaction.emoji.name == "☑") {
 
         messageReaction.message.channel.send("", {
             embed: {
