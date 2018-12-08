@@ -342,7 +342,7 @@ message.channel.send({ embed });
     }
 });
 client.on("messageReactionAdd", function (messageReaction, member) {
-    if (member.bot) return;
+    console.log(messageReaction.emoji.name);
     if (messageReaction.emoji.name == "✅") {
         console.log("Rect0 In")
         var ok = false;
