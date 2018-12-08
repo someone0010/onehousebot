@@ -210,6 +210,7 @@ client.on("ready", function() {
         title: "Event Emit",
         description: "ready"
     }})
+    client.guilds.get("493432486148177923").channels.get("516263179446124555").fetchMessages()
 })
 client.on("warn", (e)=> {
     devlogchannel.send("", {embed: {
