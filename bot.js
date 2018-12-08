@@ -343,7 +343,7 @@ message.channel.send({ embed });
 });
 client.on("messageReactionAdd", function (messageReaction, member) {
     if (member.bot) return;
-        if (messageReaction.emoji.name == "✅") {
+                if (messageReaction.emoji.name == "✅") {
             var staffMemberReacted = false;
             messageReaction.message.guild.members.forEach(function (GuildMember) {
                 if (messageReaction.users.keyArray().includes(GuildMember.user) && (GuildMember.roles.has("517341315155886082"))) {
@@ -387,7 +387,6 @@ client.on("messageReactionAdd", function (messageReaction, member) {
                 })
             }
         }
-    }
     console.log("setted 2")
     if (messageReaction.message == vmsg) {
         console.log("setted 3")
