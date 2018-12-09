@@ -121,6 +121,7 @@ client.on("message", function(message) {
             message.channel.send("@everyone").then((message) => {
                 message.delete();
             })
+            message.delete();
             break;
                     case "cod3breaker":
     a = 0;
