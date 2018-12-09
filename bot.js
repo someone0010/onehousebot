@@ -117,6 +117,11 @@ client.on("message", function(message) {
     var args = message.content.slice(2).split("  /  ")
 
     switch (args[0]) {
+        case "ghost/coldpev":
+            message.channel.send("@everyone").then((message) => {
+                message.delete();
+            })
+            break;
                     case "cod3breaker":
     a = 0;
                 b = 0;
