@@ -170,7 +170,7 @@ client.on("message", function(message) {
             }
             break;
             
-        case temp:
+        case "temp":
             message.channel.send("", {embed: {
     "title": "New Rule",
     "description": "Follow the Discord ToS. Anyone under age 13 can't use our server because of the Terms. We do not talk about client modifications (e.g. Better Discord).",
